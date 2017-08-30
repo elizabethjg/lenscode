@@ -1,0 +1,6 @@
+#image name 
+group001rs.fits
+#sextractor catalogue 
+run2-r0.cat
+#seeing en pixs 
+3.675
