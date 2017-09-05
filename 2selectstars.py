@@ -17,7 +17,7 @@ Entrada: archivo_entrada
 
 archivo_entrada='input_2selectr.in'
 
-def star_gx2(salida_sex,plot,fwhm,mumin,mumax):
+def star_gx(salida_sex,plot,fwhm,mumin,mumax):
 	
 	
 	print '######## CLASIFICANDO LOS OBJETOs #######'
@@ -195,7 +195,7 @@ plt.show()
 mumin=float(raw_input('Ingrese mu minimo '))
 mumax=float(raw_input('Ingrese mu maximo '))
 
-stars, gx=star_gx2(salida_sex,'si',fwhm,mumin,mumax)		
+stars, gx=star_gx(salida_sex,'si',fwhm,mumin,mumax)		
 
 f1=open('stars.cat','w')
 
