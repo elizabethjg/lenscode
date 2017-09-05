@@ -4,12 +4,14 @@ import numpy as np
 from pylab import *
 import matplotlib.pyplot as plt
 
-f = open('stars_correc.out', 'r')
+file_check='stars_correc.out'
+
+f = open(file_check, 'r')
 ncol = int(f.read(2))
 nstars = int(f.read(4))
 f.close()
 print ncol, nstars
-allstars = np.loadtxt('stars_correc.out', comments='#',skiprows=1) #reads the im2shape catalogue for the stars
+allstars = np.loadtxt(file_check, comments='#',skiprows=1) #reads the im2shape catalogue for the stars
 print allstars.shape
 
 e1=allstars[:,18]

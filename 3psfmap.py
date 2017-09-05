@@ -7,6 +7,9 @@ import sys
 from selectstars import *
 from psffile import *
 
+
+
+
 f = open('stars.out', 'r')
 ncol = int(f.read(2))
 nstars = int(f.read(4))
