@@ -29,7 +29,7 @@ cat2 = np.loadtxt('run2-i.cat', comments='#') #sextractor catalogue for all the 
 
 
 
-f = open('gx.out', 'r')
+f = open('gx.out', 'r') #im2shape catalog
 linecat=f.readline()
 ncol = int(linecat[:2])
 ngxcat = int(linecat[3:-1])
@@ -65,8 +65,6 @@ erre1=gxim2[:,34]
 erre2=gxim2[:,35]
 ab=gxim2[:,10]
 
-# Distancias a los bordes
-# en x
 
 
 ro_gx=ngxcat/(x.max()*y.max()*(pixsize**2)*((1.0/60.0)**2))
@@ -74,14 +72,11 @@ print 'densidad de gx = ', ro_gx, ' gx/arcmin**2'
 
 e=(e1**2+e2**2)**0.5
 theta=(np.arctan2(e2,e1)/2.0)+(np.pi/2.0)
-axis_a=(ab*((1.0+e)/(1.0-e)))**0.5
-axis_b=ab/axis_a
-a1=axis_a*cos(theta)
-a2=axis_a*sin(theta)
-print ngxcat
+
+print 'TOTAL DE GALAXIAS ',ngxcat
 #Now is going to match sextractor catalogues to exctrat the r-magnitudes for the galaxies
 MAG2=np.zeros(ngxcat,float)
-MAG3=np.zeros(ngxcat,float)
+
 difpos=np.zeros(ngxcat,float)
 n=0
 
